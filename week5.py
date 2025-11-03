@@ -80,7 +80,7 @@ X_input = np.array([[0, 0],
                     [1, 1]])
 
 # Output data for XOR (4 examples, 1 output each)
-y_true = np.array([[0], [1], [1], [1]])
+y_true = np.array([[0], [1], [1], [0]])
 
 # Create a neural network instance
 nn = NeuralNetwork(input_size=2, hidden_size=4, output_size=1, learning_rate=0.1)
@@ -90,8 +90,9 @@ print("Training the neural network...")
 nn.train(X_input, y_true, epochs=10000)
 
 # After training, test the neural network on the XOR input
-print("\nTesting the neural network on the OR input:")
+print("\nTesting the neural network on the XOR input:")
 y_pred = nn.test(X_input)
 
 print("\nPredicted output after training:")
 print(y_pred)
+
